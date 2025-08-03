@@ -1,48 +1,145 @@
-<div class="bio" style="
-  background: linear-gradient(90deg,#eecda3,#ef629f 90%);
-  border: none;
-  box-shadow: 0 2px 16px 0 rgba(239,98,159,0.14);
-  color: #2e293c;
-  font-size: 1.17em;
-  font-family: 'Montserrat', Arial, sans-serif;
-  letter-spacing: 0.06em;
-  margin-bottom: 2.3em;
-  position: relative;
-  overflow: hidden;
-">
-  <div style="
-    font-size: 1.27em;
-    font-weight: 700;
-    color: #92278f;
-    background: linear-gradient(70deg,#ffd700,#fe5196,#5de0e6);
-    background-clip: text;-webkit-background-clip:text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: .5em;
-    letter-spacing: 0.07em;
-  ">
-    Senior Cloud &amp; IT Systems Specialist
-  </div>
-  <div style="color: #544c7d;">
-    <span style="font-weight:bold; color:#da2673;">8+ years</span>
-    experience in <span style="font-weight:bold; color:#1d82c1;">Azure</span>,
-    <span style="font-weight:bold; color:#44b06c;">automation</span>,
-    <span style="font-weight:bold; color:#fc7c34;">security</span>, and endpoint management for global businesses.<br>
-    <span style="color:#da2673;font-weight:600;">
-      I streamline onboarding, boost compliance, and build high-performing, resilient tech teams.
-    </span>
-  </div>
-  <div style="
-    margin-top: 1.1em;
-    font-size: 1.1em;
-    background: linear-gradient(90deg,#c471f5 0%,#fa71cd 100%);
-    color: #fff;
-    padding: 0.7em 1.2em;
-    border-radius: 8px;
-    font-weight: 600;
-    text-shadow: 0 2px 6px #d278c7;
-    box-shadow: 0 2px 8px #ffb7ed33;
-    display: inline-block;
-  ">
-    Let’s connect, collaborate,<br>
-    and <span style="color: #ffd93a;">drive digital transformation 🚀</span>
-  </
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zeshan Nasir | IT & Cloud Specialist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Senior Cloud & IT Systems Specialist | Azure, M365, Automation, Security, Project Delivery">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(120deg,#5e60ce 0%,#70e1f5 100%);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      margin: 24px auto 34px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 32px 2px #5e60ce44;
+      padding: 2.2em 2.2em 2em 2.2em;
+      position: relative;
+      animation: fadeIn 1.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(36px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    /* Header & Avatar */
+    .avatar {
+      width: 114px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      border: 4px solid #5e60ce;
+      box-shadow: 0 2px 12px #5e60ce44;
+      animation: avatarPop 0.7s;
+    }
+    @keyframes avatarPop {
+      0% { transform: scale(0); opacity: 0;}
+      80% {transform:scale(1.08);}
+      100%{transform: scale(1); opacity: 1;}
+    }
+    h1 {
+      font-size: 2.8em;
+      background: linear-gradient(90deg,#f7971e,#ffd200 60%,#5e60ce);
+      -webkit-background-clip:text; background-clip:text;
+      -webkit-text-fill-color:transparent; text-fill-color:transparent;
+      margin: 0 0 .2em 0;
+      animation:fadeIn 2s;
+    }
+    .role {
+      font-size: 1.22em; color: #5941a9; font-weight: bold; margin-bottom: .8em;
+      letter-spacing: .7px;
+    }
+    /* Animated Bio */
+    .bio {
+      background: linear-gradient(90deg,#fdc094 0%,#fa71cd 100%);
+      border-radius: 12px;
+      padding: 1.15em 1.4em;
+      margin-bottom: 1.7em;
+      font-size: 1.20em;
+      color: #35184a;
+      box-shadow: 0 2px 14px #fa71cd22;
+      position: relative;
+      animation: bounceBio 1.1s;
+    }
+    @keyframes bounceBio {
+      0%{transform:scale(0.94);}
+      35%{transform:scale(1.07);}
+      100%{transform:scale(1);}
+    }
+    .bio strong {
+      color: #fa5147;
+      font-weight: 700;
+    }
+    .highlight {
+      color: #229ed9; font-weight: 700;
+    }
+    .contact-icons a {
+      display: inline-block;
+      margin-right: 15px;
+      color:#fff; background: #5e60ce;
+      border-radius:50%; width:38px; height:38px; text-align:center; line-height:39px;
+      font-size:1.25em; transition:.17s box-shadow, background;
+      box-shadow:0 1px 7px #5e60ce22;
+      margin-top: 7px;
+    }
+    .contact-icons a:hover { background: #229ed9; color: #fff; box-shadow:0 2px 14px #229ed955;}
+    .skills-section {margin-bottom: 2em;}
+
+    /* Skill icons */
+    .skills-list { display: flex; flex-wrap: wrap; gap: .5em;}
+    .skill-icon {
+      display: flex; align-items:center; font-size:.9em;
+      background: #e6eaff;
+      border-radius: 7px; padding: .28em .85em .28em .42em;
+      box-shadow:0 1px 4px #5e60ce15;
+      margin-bottom:.27em;
+      gap: .38em;
+      transition: background .16s;
+    }
+    .skill-icon img {width: 1.1em; height: 1.1em;}
+    .skill-icon:hover { background: #d7f8fc;}
+    /* Projects Grid */
+    .projects-section {margin-bottom:2em;}
+    .projects-grid {display: flex; flex-wrap:wrap; gap:1.0em;}
+    .project-card {
+      flex:1 1 260px; min-width:260px; max-width:380px;
+      background: linear-gradient(95deg, #5e60ce11,#38b6ff11 100%);
+      border-radius: 13px;
+      padding: 1.05em 1.25em;
+      box-shadow: 0 2px 14px #5e60ce18;
+      position: relative;
+      transition: transform .19s, box-shadow .18s;
+      margin-bottom: .3em;
+      border:1.3px solid #e3eafc;
+      overflow: hidden;
+      animation: fadeInCard 1.6s;
+    }
+    .project-card:hover {
+      transform: translateY(-8px) scale(1.03) rotate(-0.5deg);
+      box-shadow: 0 9px 38px #229ed948, 0 2px 10px #5e60ce24;
+      border-color:#5e60ce50;
+      background:linear-gradient(98deg,#cddcfa 0,#e0ecfc 90%);
+    }
+    @keyframes fadeInCard {
+      from { opacity:0; transform:scale(.97);}
+      to { opacity:1; transform: scale(1);}
+    }
+    .project-card .icon { font-size: 2.5em; margin-bottom: .32em;}
+    .project-title { font-weight:700; color:#5941a9; margin:0 0 .23em 0; font-size:1.22em;}
+    .project-desc { font-size:.98em; margin-bottom: .7em; color:#473061;}
+    .project-links a {margin-right:1em; text-decoration:none; color:#229ed9; font-weight:600;}
+    /* Section headings */
+    h2 {color:#5e60ce;border-bottom:2px solid #e3eafc;padding-bottom:4px; text-transform:uppercase;margin-top:2.2em;margin-bottom:.8em;font-size:1.13em;}
+    footer { margin-top: 2em; color:#8fa7e8; text-align:right; font-size:.96em; letter-spacing:.7px;}
+    @media(max-width: 750px){.container{padding:13px 5px;}.projects-grid{flex-direction:column;}.skill-icon{padding:.17em .65em;}.project-card{min-width:0;max-width:100%;}}
+    @media(max-width: 500px){ h1{font-size:2em;}.container{padding:4px;}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <center>
+      <img class="avatar" src="https://avatars.githubusercontent
