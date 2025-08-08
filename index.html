@@ -1,334 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Zeshan Nasir | IT & Cloud Specialist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cloud, Automation, AI, Security. Portfolio of Zeshan Nasir." />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zeshan Nasir — IT &amp; Cloud Specialist | Automation &amp; AI Enthusiast</title>
+  <meta name="description" content="Zeshan Nasir — IT & Cloud Specialist, Automation & AI Enthusiast based in Stockholm, Sweden. Azure, M365, Python, Jamf, AI/ML, Security, Compliance, ServiceNow, Active Directory. Contact: zeshan@nasir.icloud.com" />
+  <meta name="author" content="Zeshan Nasir" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.zeshannasir.com/" />
   <style>
-    :root {
-      --bg: linear-gradient(135deg, #f4e6ff 0%, #f9faff 80%);
-      --card-bg: #fff;
-      --card-grad: linear-gradient(120deg, #f6dcfa 55%, #e6eaff 100%);
-      --primary: #5e60ce;
-      --accent: #fa71cd;
-      --secondary: #46afa7;
-      --heading: #241959;
-      --muted: #7881b1;
-      --white: #fff;
-      --br: 22px;
-      --shadow: 0 6px 32px 2px #5e60ce20;
-      --shadow-card: 0 4px 18px #6244e220;
-      --section-pad: 48px 0 36px 0;
+    :root{
+      --bg-0:#071025; --bg-1:#0e1724; --muted:#98A6B2;
+      --glass: rgba(255,255,255,0.03);
+      --accent-a:#6EE7B7; --accent-b:#7C6CFF;
+      --radius:14px; --shadow:0 18px 50px rgba(3,8,23,0.7);
+      --max-width:1200px; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
     }
-    body {
-      margin: 0;
-      background: var(--bg);
-      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
-      color: var(--heading);
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:40px;display:flex;justify-content:center;align-items:flex-start;
+      background:
+        radial-gradient(800px 400px at 12% 10%, rgba(124,108,255,0.04), transparent 7%),
+        radial-gradient(700px 300px at 88% 88%, rgba(110,231,183,0.03), transparent 7%),
+        linear-gradient(180deg,var(--bg-0),var(--bg-1) 60%);
+      color:#eaf3f9; -webkit-font-smoothing:antialiased;
+      line-height:1.45;
     }
-    .outer {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    header {
-      background: var(--bg);
-      padding: 42px 0 5px 0;
-      text-align: center;
-      position: relative;
-    }
-    .avatar {
-      width: 128px; height: 128px;
-      border-radius: 50%;
-      border: 5px solid var(--accent);
-      object-fit: cover;
-      background: #fff;
-      box-shadow: 0 8px 24px #473bac2a;
-      margin-bottom: 16px;
-      transition: box-shadow .2s;
-    }
-    .avatar:hover {
-      box-shadow: 0 0 0 6px #fa71cd33, 0 8px 32px #5e60ce1a;
-    }
-    h1 {
-      font-family: 'Montserrat',Arial,sans-serif;
-      font-size: 2.75em;
-      font-weight: 700;
-      margin: 0 0 .17em 0;
-      line-height: 1.1;
-      background: linear-gradient(90deg,#7357f5 60%,#ff8bb7 98%);
-      background-clip: text;
-      color: transparent;
-      -webkit-background-clip: text;
-    }
-    .headline {
-      color: var(--primary);
-      font-size: 1.21em;
-      font-weight: 600;
-      letter-spacing: .6px;
-      margin-bottom: .7em;
-    }
-    nav {
-      margin: 0 0 36px 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 600;
-      font-size: 1em;
-      border-radius: 14px;
-      padding: 8px 18px;
-      transition: all .2s cubic-bezier(.5,0,.25,1);
-      border: 2px solid transparent;
-      background: transparent;
-    }
-    nav a:focus, nav a:hover {
-      color: var(--accent);
-      background: #eff1f9;
-      border: 2px solid var(--accent);
-    }
-    .blurb {
-      max-width: 590px;
-      margin: 19px auto 0 auto;
-      font-size: 1.18em;
-      color: #343679;
-      text-align: center;
-      line-height: 1.65;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: -38px auto 0 auto;
-      background: var(--white);
-      border-radius: var(--br);
-      box-shadow: var(--shadow);
-      padding: 48px 28px 38px 28px;
-      position: relative;
-      z-index: 10;
-      margin-bottom: 36px;
-    }
-
-    /* Section headers with a slick accent line */
-    .section {
-      margin: var(--section-pad);
-    }
-    .section-title {
-      font-size: 1.38em;
-      color: var(--primary);
-      text-align: center;
-      margin-bottom: 30px;
-      font-family: 'Montserrat',sans-serif;
-      font-weight: bold;
-      position: relative;
-      z-index: 1;
-    }
-    .section-title::after {
-      content: "";
-      display: block;
-      margin: 9px auto 0 auto;
-      width: 38px; height: 3px;
-      border-radius: 2px;
-      background: linear-gradient(90deg,var(--primary),var(--accent) 82%);
-    }
-
-    /* Project Cards */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-      gap: 28px;
-    }
-    .project-card {
-      background: var(--card-grad);
-      border-radius: 16px;
-      box-shadow: var(--shadow-card);
-      padding: 22px 20px 22px 22px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-      min-height: 160px;
-      transition: transform .21s cubic-bezier(.15,.7,.39,.95),box-shadow .27s;
-      z-index: 1;
-    }
-    .project-card:hover {
-      box-shadow: 0 8px 48px 2px #fa71cd64;
-      transform: translateY(-8px) scale(1.026);
-    }
-    .project-title {
-      color: var(--primary);
-      font-weight: 700;
-      margin: 0 0 8px 0;
-      font-size: 1.13em;
-      letter-spacing: .09em;
-    }
-    .project-desc {
-      flex: 1;
-      color: #473ba7;
-      font-size: .98em;
-      margin-bottom: 0;
-      min-height: 38px;
-    }
-
-    /* About & Skills */
-    .about {
-      max-width: 670px;
-      margin: 0 auto;
-      padding: 0 0 23px 0;
-      color: #463aab;
-      font-size: 1.1em;
-      text-align: center;
-    }
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      justify-content: center;
-      margin: 13px 0 11px 0;
-      padding: 0;
-    }
-    .badge {
-      display: flex;
-      align-items: center;
-      background: #e7ecff;
-      color: #5e60ce;
-      border-radius: 12px;
-      font-size: .99em;
-      font-weight: bold;
-      padding: 7px 16px 7px 11px;
-      box-shadow:0 1px 8px #f3eaff70;
-    }
-    .badge img {
-      width: 22px;
-      margin-right: 9px;
-      vertical-align: middle;
-    }
-
-    /* Contact Section */
-    .contact-btns {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 18px 0 10px 0;
-      flex-wrap: wrap;
-    }
-    .contact-btn {
-      background: linear-gradient(90deg,#5e60ce,#fa71cd 85%);
-      color: #fff;
-      padding: 12px 30px;
-      border-radius: 22px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.07em;
-      box-shadow:0 2px 12px #5e60ce20;
-      border: none;
-      outline: none;
-      transition: box-shadow .18s, background .22s;
-      cursor: pointer;
-    }
-    .contact-btn:hover, .contact-btn:focus {
-      background: linear-gradient(90deg,#6a3fd8,#ff98cc 90%);
-      box-shadow: 0 2px 26px #fa71cd22;
-    }
-    .footer {
-      text-align: center;
-      color: #7357f5;
-      margin: 44px 0 19px 0;
-      font-size: 1.07em;
-    }
-    @media (max-width:800px){
-      .container {padding: 1em 1.3vw;}
-    }
-    @media (max-width:500px){
-      .container {padding: 1.1em 4vw;}
-      h1 {font-size:2em;}
-    }
+    .wrap{width:min(var(--max-width),100%);display:grid;grid-template-columns:1fr 380px;gap:28px}
+    header{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:6px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent-b),var(--accent-a));display:grid;place-items:center;color:#071127;font-weight:800;font-size:18px;box-shadow:0 10px 30px rgba(124,108,255,0.12)}
+    nav{display:flex;gap:12px;align-items:center}
+    .navlink{font-size:12px;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px;transition:all .18s}
+    .navlink:hover{color:var(--accent-a);transform:translateY(-3px)}
+    main{display:grid;gap:20px}
+    aside{align-self:start;position:sticky;top:36px}
+    .card{border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:22px;border:1px solid var(--glass);box-shadow:var(--shadow)}
+    .hero{display:flex;gap:22px;align-items:center;flex-wrap:wrap;padding:28px}
+    .avatar{width:140px;height:140px;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.04);box-shadow:0 18px 46px rgba(2,6,23,0.6);flex:0 0 140px;background:linear-gradient(135deg,var(--accent-a),var(--accent-b));display:grid;place-items:center}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .intro h1{margin:0;font-size:20px}
+    .role{margin-top:6px;color:var(--accent-a);font-weight:700;font-size:13px}
+    .meta{margin-top:12px;color:var(--muted);font-size:13px;max-width:66ch}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .badge{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03);font-weight:700;font-size:13px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:transparent;color:#eaf3f9;text-decoration:none;border:1px solid rgba(255,255,255,0.04);font-weight:700;font-size:13px;transition:transform .16s,box-shadow .16s}
+    .btn.primary{background:linear-gradient(90deg,var(--accent-a),var(--accent-b));color:#071127;border:none}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(2,6,23,0.45)}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .project{padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg, rgba(255,255,255,0.012), transparent);transition:transform .18s,box-shadow .18s}
+    .project:hover{transform:translateY(-10px);box-shadow:0 30px 70px rgba(2,6,23,0.6)}
+    .skills{display:flex;gap:8px;flex-wrap:wrap}
+    .skill{padding:10px 12px;border-radius:10px;font-weight:700;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(90deg,rgba(255,255,255,0.01),transparent)}
+    .contact .row{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+    .ico{width:44px;height:44px;border-radius:10px;background:linear-gradient(90deg,var(--accent-b),var(--accent-a));display:grid;place-items:center;font-weight:800;color:#071127}
+    .socials{display:flex;gap:8px;margin-top:8px}
+    .socials a{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);background:transparent;text-decoration:none;color:inherit}
+    .socials svg{width:18px;height:18px;transition:transform .14s}
+    .socials a:hover svg{transform:scale(1.06) rotate(-6deg)}
+    footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:13px;padding-top:8px}
+    @media (max-width:980px){.wrap{grid-template-columns:1fr;padding-bottom:36px}.projects-grid{grid-template-columns:1fr}aside{position:relative;top:auto}}
+    @media (max-width:520px){body{padding:18px}.avatar{width:110px;height:110px;border-radius:12px}.hero{padding:18px}.navlink{display:none}}
+    a.link{color:var(--accent-a);text-decoration:none;font-weight:700;position:relative}
+    a.link:after{content:"";position:absolute;left:0;bottom:-4px;height:3px;width:100%;border-radius:6px;background:linear-gradient(90deg,var(--accent-a),var(--accent-b));transform:scaleX(0);transform-origin:left;transition:transform .22s}
+    a.link:hover:after{transform:scaleX(1)}
+    a:focus{outline:3px solid rgba(124,108,255,0.18);outline-offset:4px}
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Zeshan Nasir",
+    "email":"mailto:zeshan@nasir.icloud.com",
+    "jobTitle":"IT & Cloud Specialist | Automation & AI Enthusiast",
+    "url":"https://www.linkedin.com/in/zeshannasir",
+    "sameAs":["https://www.linkedin.com/in/zeshannasir","https://github.com/ZeshanNasir"],
+    "address":{"@type":"PostalAddress","addressLocality":"Stockholm","addressCountry":"Sweden"}
+  }
+  </script>
 </head>
 <body>
-  <div class="outer">
+  <div class="wrap" role="main" aria-labelledby="page-title">
     <header>
-      <img class="avatar" src="https://media.licdn.com/dms/image/C4D03AQHCe212U5ZNgA/profile-displayphoto-shrink_400_400/0/1517575396643?e=2147483647&v=beta&t=VbIUMbirhIuH9wIbKr3PB61MoyLmjRZagYHiV6yXsN0" alt="Zeshan Nasir Avatar">
-      <h1>Zeshan Nasir</h1>
-      <div class="headline">IT &amp; Cloud Specialist, Automation &amp; AI Enthusiast</div>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="https://github.com/ZeshanNasir" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/zeshannasir" target="_blank">LinkedIn</a>
-      </nav>
-      <div class="blurb">
-        Hello there! I’m Zeshan—a builder and optimizer of reliable, modern cloud and automation solutions. System Admin @ Optimizely (Stockholm).<br>
-        <b>Focus:</b> Cloud, Automation, Microsoft 365, Compliance (ISO/GDPR), AI/ML, Team Onboarding & Empowerment.<br>
-        Always curious, always learning—let’s make cool things happen.
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true">ZN</div>
+        <div>
+          <div style="font-weight:800">Zeshan Nasir</div>
+          <div style="font-size:12px;color:var(--muted)">IT &amp; Cloud Specialist | Automation &amp; AI Enthusiast</div>
+        </div>
       </div>
+
+      <nav aria-label="Primary navigation">
+        <a class="navlink" href="#projects">Projects</a>
+        <a class="navlink" href="#skills">Skills</a>
+        <a class="navlink" href="#certifications">Certifications</a>
+        <a class="navlink" href="#community">Community</a>
+        <a class="navlink" href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <main class="container">
-      <section id="projects" class="section">
-        <div class="section-title">Featured Projects</div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-title">Local LLM Experimentation on Mac</div>
-            <div class="project-desc">Deploying custom AI (Python, Hugging Face, LLM, Streamlit) for workflow and team productivity. Focus: real-world, privacy-first, local chatbots for Mac.</div>
+    <!-- MAIN column -->
+    <main>
+      <!-- HERO -->
+      <section class="card hero" aria-labelledby="page-title">
+        <div class="avatar" role="img" aria-label="Zeshan Nasir — professional photo">
+          <!-- Local preferred image for reliability; fallback to GitHub avatar -->
+          <img alt="Zeshan Nasir — professional photo" loading="lazy"
+               src="./avatar.jpg"
+               onerror="this.onerror=null;this.src='https://github.com/ZeshanNasir.png';" />
+        </div>
+
+        <div class="intro" id="page-title">
+          <h1 style="margin:0">Zeshan Nasir</h1>
+          <div class="role">IT &amp; Cloud Specialist | Automation &amp; AI Enthusiast</div>
+
+          <div class="meta" style="margin-top:12px">
+            Location: Stockholm, Sweden · Experience: 3+ years at Optimizely · Expert in Azure, M365, Python, Jamf, AI/ML, Security, Compliance, Onboarding, ServiceNow, Active Directory
           </div>
-          <div class="project-card">
-            <div class="project-title">Hospital Network Management System</div>
-            <div class="project-desc">Designed robust hub-and-spoke network (VPN, Windows, web scheduling) with real-time, multi-site hospital operations (ISO and GDPR compliant).</div>
+
+          <div class="badges" aria-hidden="false" style="margin-top:12px">
+            <span class="badge">Experience: 3+ years at Optimizely</span>
+            <span class="badge">Spot Award at Optimizely</span>
           </div>
-          <div class="project-card">
-            <div class="project-title">Antarctic Skies Event Platform (collab)</div>
-            <div class="project-desc">End-to-end event/trip management for Antarctic Skies. Backend, cloud, DevOps, and dashboard UI. Inspired by Rizwan’s project with a performance and security boost.</div>
-          </div>
-          <div class="project-card">
-            <div class="project-title">Motivational iOS App</div>
-            <div class="project-desc">Concept/design for a daily motivation app, helping users stay focused. (Inspired by Everyday Motivated by Rizwan Nasir.)</div>
+
+          <div class="cta" style="margin-top:14px">
+            <a class="btn primary" href="mailto:zeshan@nasir.icloud.com" aria-label="Email Zeshan">Email — zeshan@nasir.icloud.com</a>
+            <a class="btn" href="https://github.com/ZeshanNasir" target="_blank" aria-label="GitHub profile"> 
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.84 5.39.84 11.66c0 4.85 3.14 8.96 7.5 10.41.55.1.75-.24.75-.53v-1.86c-3.04.66-3.68-1.35-3.68-1.35-.5-1.28-1.22-1.62-1.22-1.62-.99-.67.07-.66.07-.66 1.1.08 1.68 1.13 1.68 1.13.97 1.66 2.54 1.18 3.16.9.1-.7.38-1.18.69-1.45-2.43-.28-4.99-1.22-4.99-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.11-2.96 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 5.56 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.54.22 2.68.11 2.96.7.77 1.13 1.75 1.13 2.95 0 4.22-2.57 5.15-5.01 5.42.39.33.73.99.73 2v2.96c0 .29.2.64.76.53 4.37-1.45 7.51-5.56 7.51-10.41C23.16 5.39 18.27.5 12 .5z" fill="currentColor"/></svg>
+              <span style="margin-left:8px">GitHub</span>
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/zeshannasir" target="_blank" aria-label="LinkedIn profile">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.1 1 2.48 1c1.38 0 2.5 1.12 2.5 2.5zM0 8.99h5v15H0v-15zM8.5 8.99h4.8v2.07h.07c.67-1.27 2.3-2.61 4.73-2.61 5.06 0 6 3.33 6 7.65v8h-5v-7.06c0-1.69-.03-3.87-2.36-3.87-2.36 0-2.72 1.85-2.72 3.76v7.17h-5v-15z" fill="currentColor"/></svg>
+              <span style="margin-left:8px">LinkedIn</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section">
-        <div class="section-title">About & Skills</div>
-        <div class="about">
-          <b>Senior IT & Cloud Specialist (3+ years @ Optimizely, Sweden).</b><br>
-          Skills: Azure, M365, Jamf, Python, Intune, Compliance, AI/ML, Security, ITIL, Onboarding.<br>
-          <b>Certifications:</b> Jamf Certified Associate (2024), MS Office Specialist, HCIP Routing & Switching.<br>
-          <b>Awards:</b> Spot Award (Optimizely).<br>
-          <b>Community:</b> AAOU, Akhuwat.<br>
-          <b>Tools:</b> Azure, MS365, Intune, Jamf, Active Directory, ServiceNow.
+      <!-- Projects -->
+      <section id="projects" class="card" aria-labelledby="projects-heading">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <h2 id="projects-heading" style="margin:0">Projects</h2>
+          <div style="color:var(--muted);font-size:13px">Featured &amp; collaborative work</div>
         </div>
-        <div class="badges">
-          <span class="badge"><img src="https://img.shields.io/badge/-Azure-0078D4?logo=microsoft-azure&logoColor=white" alt="Azure Logo"/>Azure</span>
-          <span class="badge"><img src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white" alt="Python Logo"/>Python</span>
-          <span class="badge"><img src="https://img.shields.io/badge/-AI%2FML-FFD600?logo=bytedance&logoColor=white" alt="AI/ML Logo"/>AI/ML</span>
-          <span class="badge"><img src="https://img.shields.io/badge/-Jamf%20MDM-74B2E6?logo=apple&logoColor=white" alt="Jamf Logo"/>Jamf MDM</span>
-          <span class="badge"><img src="https://img.shields.io/badge/-Microsoft%20365-00A4EF?logo=microsoft&logoColor=white" alt="Microsoft 365"/>Microsoft 365</span>
-          <span class="badge"><img src="https://img.shields.io/badge/-Active%20Directory-2672EB?logo=windows&logoColor=white" alt="Active Directory Logo"/>Active Directory</span>
+
+        <div class="projects-grid" role="list">
+          <article class="project" role="listitem" aria-labelledby="proj1">
+            <h3 id="proj1">Local LLM Experimentation on Mac</h3>
+            <p>Research &amp; lab work using local LLMs for private experimentation and macOS deployment patterns. Code and notes: github.com/ZeshanNasir</p>
+          </article>
+
+          <article class="project" role="listitem" aria-labelledby="proj2">
+            <h3 id="proj2">Hospital Network Management System</h3>
+            <p>Operational tooling and networking orchestration for healthcare infrastructure — Azure, Active Directory, networking automation.</p>
+          </article>
+
+          <article class="project" role="listitem" aria-labelledby="proj3">
+            <h3 id="proj3">Antarctic Skies Event Platform (collab)</h3>
+            <p>Collaborative event platform — frontend contributions and cloud infra integration (collaboration work).</p>
+          </article>
+
+          <article class="project" role="listitem" aria-labelledby="proj4">
+            <h3 id="proj4">Motivational iOS App</h3>
+            <p>UX-first iOS micro-app with notifications and local sync — design, deployment and iterate cycles.</p>
+          </article>
         </div>
       </section>
 
-      <section id="contact" class="section">
-        <div class="section-title">Contact</div>
-        <div class="contact-btns">
-          <a href="mailto:zeshan@nasir.icloud.com" class="contact-btn">Email</a>
-          <a href="https://linkedin.com/in/zeshannasir" target="_blank" class="contact-btn">LinkedIn</a>
-          <a href="https://github.com/ZeshanNasir" target="_blank" class="contact-btn">GitHub</a>
+      <!-- About & Achievements -->
+      <section class="card" aria-labelledby="about-heading">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <h2 id="about-heading" style="margin:0">About &amp; Achievements</h2>
+          <div style="color:var(--muted);font-size:13px">Career highlights</div>
         </div>
-        <div style="text-align:center; color:#6657f5; margin-bottom:8px;">
-          Open for work, collaboration, and new adventures. Always eager to chat about cloud, AI &amp; automation!
+
+        <p style="margin:0 0 10px 0;color:var(--muted)">
+          Role: IT &amp; Cloud Specialist | Automation &amp; AI Enthusiast. Experience includes 3+ years at Optimizely. Awards: Spot Award at Optimizely.
+        </p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <div style="min-width:180px;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02)">
+            <strong>Experience</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:8px">3+ years at Optimizely — Azure, M365, Python, Jamf, AI/ML, Security, Compliance, Onboarding, ServiceNow, Active Directory</div>
+          </div>
+
+          <div style="min-width:180px;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02)">
+            <strong>Endorsements</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:8px">system administration (29+), networking (99+), Azure, Microsoft 365, Jamf, Python, AI/ML</div>
+          </div>
         </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="card" aria-labelledby="skills-heading">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <h2 id="skills-heading" style="margin:0">Skills</h2>
+          <div style="color:var(--muted);font-size:13px">Technical &amp; operational</div>
+        </div>
+
+        <div class="skills" role="list" aria-label="Skills list">
+          <div class="skill" role="listitem">Azure</div>
+          <div class="skill" role="listitem">M365</div>
+          <div class="skill" role="listitem">Python</div>
+          <div class="skill" role="listitem">Jamf</div>
+          <div class="skill" role="listitem">AI/ML</div>
+          <div class="skill" role="listitem">Security</div>
+          <div class="skill" role="listitem">Compliance</div>
+          <div class="skill" role="listitem">Onboarding</div>
+          <div class="skill" role="listitem">ServiceNow</div>
+          <div class="skill" role="listitem">Active Directory</div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications" class="card" aria-labelledby="certs-heading">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <h2 id="certs-heading" style="margin:0">Certifications &amp; Awards</h2>
+          <div style="color:var(--muted);font-size:13px">Professional validation</div>
+        </div>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div class="badge" role="listitem">Jamf Certified Associate (2024)</div>
+          <div class="badge" role="listitem">Microsoft Office Specialist</div>
+          <div class="badge" role="listitem">HCIP Routing &amp; Switching</div>
+          <div class="badge" role="listitem">Spot Award at Optimizely</div>
+        </div>
+      </section>
+
+      <!-- Community -->
+      <section id="community" class="card" aria-labelledby="community-heading">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <h2 id="community-heading" style="margin:0">Community</h2>
+          <div style="color:var(--muted);font-size:13px">Volunteering &amp; membership</div>
+        </div>
+
+        <p style="margin:0;color:var(--muted)">Community: AAOU, Akhuwat (12+ years service)</p>
       </section>
     </main>
-    <div class="footer">
-      &copy; 2025 Zeshan Nasir &mdash; Crafted by yours truly | Design inspired by Rizwan Nasir
-    </div>
+
+    <!-- RIGHT: Sidebar -->
+    <aside>
+      <section class="card contact" id="contact" aria-labelledby="contact-heading">
+        <h3 id="contact-heading" style="margin:0 0 12px 0">Contact</h3>
+
+        <div class="row" style="margin-bottom:8px">
+          <div class="ico" aria-hidden="true">@</div>
+          <div>
+            <div style="font-weight:800">zeshan@nasir.icloud.com</div>
+            <div style="color:var(--muted);font-size:13px">Preferred email</div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom:8px">
+          <div class="ico" aria-hidden="true">📍</div>
+          <div>
+            <div style="font-weight:800">Stockholm, Sweden</div>
+            <div style="color:var(--muted);font-size:13px">Open to remote &amp; hybrid roles</div>
+          </div>
+        </div>
+
+        <div style="margin-top:8px">
+          <a class="btn" href="mailto:zeshan@nasir.icloud.com" style="width:100%;justify-content:center">Email — zeshan@nasir.icloud.com</a>
+        </div>
+
+        <div style="margin-top:12px;color:var(--muted);font-size:13px">
+          LinkedIn: <a class="link" href="https://www.linkedin.com/in/zeshannasir" target="_blank">www.linkedin.com/in/zeshannasir</a><br/>
+          GitHub: <a class="link" href="https://github.com/ZeshanNasir" target="_blank">github.com/ZeshanNasir</a>
+        </div>
+
+        <div class="socials" style="margin-top:12px" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/zeshannasir" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.1 1 2.48 1c1.38 0 2.5 1.12 2.5 2.5zM0 8.99h5v15H0v-15zM8.5 8.99h4.8v2.07h.07c.67-1.27 2.3-2.61 4.73-2.61 5.06 0 6 3.33 6 7.65v8h-5v-7.06c0-1.69-.03-3.87-2.36-3.87-2.36 0-2.72 1.85-2.72 3.76v7.17h-5v-15z" fill="currentColor"/></svg>
+          </a>
+          <a href="https://github.com/ZeshanNasir" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.84 5.39.84 11.66c0 4.85 3.14 8.96 7.5 10.41.55.1.75-.24.75-.53v-1.86c-3.04.66-3.68-1.35-3.68-1.35-.5-1.28-1.22-1.62-1.22-1.62-.99-.67.07-.66.07-.66 1.1.08 1.68 1.13 1.68 1.13.97 1.66 2.54 1.18 3.16.9.1-.7.38-1.18.69-1.45-2.43-.28-4.99-1.22-4.99-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.11-2.96 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 5.56 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.54.22 2.68.11 2.96.7.77 1.13 1.75 1.13 2.95 0 4.22-2.57 5.15-5.01 5.42.39.33.73.99.73 2v2.96c0 .29.2.64.76.53 4.37-1.45 7.51-5.56 7.51-10.41C23.16 5.39 18.27.5 12 .5z" fill="currentColor"/></svg>
+          </a>
+          <a href="mailto:zeshan@nasir.icloud.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5L4 8V6l8 5 8-5v2z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="facts-heading" style="margin-top:16px">
+        <h4 id="facts-heading" style="margin:0 0 10px 0">Quick Facts</h4>
+        <div style="color:var(--muted);font-size:13px">
+          <strong>Certifications:</strong> Jamf Certified Associate (2024), Microsoft Office Specialist, HCIP Routing &amp; Switching<br/>
+          <strong>Community:</strong> AAOU, Akhuwat (12+ years service)
+        </div>
+      </section>
+    </aside>
+
+    <footer>
+      <div style="max-width:900px;margin:0 auto">
+        <div style="display:flex;justify-content:center;gap:12px;align-items:center;margin-bottom:8px">
+          <span style="font-weight:800">Zeshan Nasir</span> — IT &amp; Cloud Specialist | Automation &amp; AI Enthusiast
+        </div>
+        <div>© <span id="year"></span> Zeshan Nasir — Stockholm, Sweden · <a class="link" href="mailto:zeshan@nasir.icloud.com">zeshan@nasir.icloud.com</a></div>
+      </div>
+    </footer>
   </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // ensure safe external linking
+    document.querySelectorAll('a[target="_blank"]').forEach(a=>a.setAttribute('rel','noopener noreferrer'));
+  </script>
 </body>
 </html>
