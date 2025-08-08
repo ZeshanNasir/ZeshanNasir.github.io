@@ -2,146 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Senior IT Systems & Cloud Specialist | Azure, AI/ML, Automation, Security, Project Delivery">
-  <meta name="author" content="Zeshan Nasir">
-  <meta name="keywords" content="cloud computing, Azure, Microsoft 365, IT systems, automation, security, DevOps, infrastructure">
   <title>Zeshan Nasir | IT & Cloud Specialist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zeshan Nasir - Senior IT & Cloud Specialist. Azure, Automation, AI, Security, Microsoft 365, and more.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(120deg, #5e60ce 0%, #70e1f5 100%);
-      min-height: 100vh;
+    :root { --accent: #5e60ce; --muted: #f9faff; --bold: #232535; --light: #eaeaff; }
+    body { margin:0; background:var(--muted); font-family:'Montserrat',Arial,sans-serif; color:var(--bold);}
+    .navbar { padding:32px 0 14px 0; background:var(--muted); text-align:center; }
+    .navbar a { margin:0 18px; color:var(--accent); font-weight:500; text-decoration:none; border-bottom:2px solid transparent; transition: border-color .12s;}
+    .navbar a:hover { border-bottom:2px solid var(--accent); color:#fa71cd; }
+    .container { max-width:750px; margin:30px auto 40px auto; box-shadow:0 4px 24px var(--light); border-radius:18px; background:#fff; padding:48px 30px 38px 30px;}
+    .hero { text-align:center; }
+    .avatar { width:120px; height:120px; border-radius:50%; border:3px solid var(--accent); object-fit:cover; margin-bottom:12px; box-shadow:0 2px 8px #5e60ce1a;}
+    h1 { font-size:2.35em; font-weight:700; margin:13px 0 0 0;}
+    .headline { color:var(--accent);font-size:1.22em;font-weight:600;margin:0 0 19px 0;}
+    .about { color:#262a3f; font-size:1.09em; margin:18px auto 26px auto; max-width:540px;line-height:1.7;}
+    .projects { display:grid; grid-template-columns:1fr 1fr; grid-gap:28px; margin:40px 0;}
+    .project-card { background:var(--light); border-radius:10px; box-shadow:0 2px 7px #c6cbf124; padding:23px 20px 14px 20px;}
+    .project-title { color:var(--accent);margin:0 0 9px 0;font-size:1.11em;font-weight:700;}
+    .project-desc { margin:0 0 11px 0;}
+    .btn { display:inline-block; background:var(--accent);color:#fff; border-radius:15px; padding:6px 18px; font-weight:600; text-decoration:none; font-size:1em; transition:background .12s;}
+    .btn:hover { background:#463ac6;}
+    @media (max-width:700px){
+      .container { padding:1.2em; }
+      .projects { grid-template-columns:1fr;}
     }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 6px 32px 2px #5e60ce44;
-      padding: 2.2em;
-      position: relative;
-      animation: fadeIn 1.3s ease;
-    }
-    @keyframes fadeIn {from{opacity:0;transform:translateY(36px);}to{opacity:1;transform:translateY(0);}}
-    .avatar {
-      width: 114px;
-      border-radius: 50%;
-      margin-bottom: 12px;
-      border: 4px solid #5e60ce;
-      box-shadow: 0 2px 12px #5e60ce44;
-    }
-    h1 {
-      font-size: 2.8em;
-      background: linear-gradient(90deg,#f7971e,#ffd200 60%,#5e60ce);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 0 0 .2em 0;
-      animation: fadeIn 2s;
-    }
-    .role { font-size: 1.22em; color: #5941a9; font-weight: bold; margin-bottom: .8em; letter-spacing: .7px;}
-    .bio {background:linear-gradient(90deg,#fdc094 0%,#fa71cd 100%);border-radius:12px;padding:1.15em 1.4em; margin-bottom:1.7em;font-size:1.20em;color:#35184a;box-shadow:0 2px 14px #fa71cd22;}
-    a.badge {margin:4px 6px; display:inline-block;}
-    h2 {color:#5e60ce;margin-top:2em;}
-    footer {margin:1.6em 0 0 0; color:#35184a;text-align:center;font-size:1em;}
-    /* Responsive */
-    @media (max-width:600px){.container{padding:1em;}}
+    footer { text-align:center; margin-top:35px; color:#75747f; font-size:.97em;}
+    .footer-link { color:#b489e6; text-decoration:underline;}
   </style>
 </head>
 <body>
+  <nav class="navbar">
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/ZeshanNasir" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/zeshannasir" target="_blank">LinkedIn</a>
+  </nav>
   <div class="container">
-    <!-- HERO/HEADER -->
-    <header style="text-align:center">
-      <img src="https://avatars.githubusercontent.com/u/yourgithubid" class="avatar" alt="Zeshan Nasir Headshot" />
+    <div class="hero">
+      <img class="avatar" src="https://media.licdn.com/dms/image/C4D03AQHCe212U5ZNgA/profile-displayphoto-shrink_400_400/0/1517575396643?e=2147483647&v=beta&t=VbIUMbirhIuH9wIbKr3PB61MoyLmjRZagYHiV6yXsN0" alt="Zeshan Nasir profile photo">
       <h1>Zeshan Nasir</h1>
-      <div class="role">IT Systems & Cloud Specialist | Azure | AI/ML | Automation</div>
-      <div>
-        <a href="mailto:zeshan.nasir@example.com">Email</a> |
-        <a href="https://linkedin.com/in/zeshannasir" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/ZeshanNasir" target="_blank">GitHub</a>
+      <div class="headline">IT &amp; Cloud Specialist, Automation &amp; AI Enthusiast</div>
+    </div>
+    <div class="about">
+      <b>Hello there!</b> I’m Zeshan—a builder and optimizer of reliable, modern cloud and automation solutions. System Admin @ Optimizely (Stockholm).<br>
+      <b>Focus:</b> Cloud, Automation, Microsoft 365, Compliance (ISO/GDPR), AI/ML, Team Onboarding &amp; Empowerment.<br>
+      Always curious, always learning—let’s make cool things happen.
+    </div>
+
+    <section id="projects">
+      <h2 style="color:var(--accent);text-align:center;margin-bottom:22px;">Featured Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <div class="project-title">Local LLM Experimentation on Mac</div>
+          <div class="project-desc">Deploying custom AI (Python, Hugging Face, LLM, Streamlit) for workflow and team productivity. Focus: real-world, privacy-first, local chatbots for Mac.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Hospital Network Management System</div>
+          <div class="project-desc">Designed robust hub-and-spoke network (VPN, Windows, web scheduling) with real-time, multi-site hospital operations (ISO and GDPR compliant).</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Antarctic Skies Event Platform (collab)</div>
+          <div class="project-desc">End-to-end event/trip management for Antarctic Skies. Backend, cloud, DevOps, and dashboard UI. Inspired by Rizwan's project with a performance and security boost.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Motivational iOS App</div>
+          <div class="project-desc">Concept/design for a daily motivation app, helping users stay focused. (Inspired by Everyday Motivated by Rizwan Nasir.)</div>
+        </div>
       </div>
-    </header>
-
-    <!-- BIO -->
-    <section class="bio">
-      <p>
-        I create value at the intersection of <b>Cloud, Automation & AI</b>. <b>3+ years at Optimizely</b> (enterprise hybrid cloud, ISO/GDPR compliance, 500+ users), plus deep experience with network automation and modern workplace IT. Passionate about innovative AI, LLMs, and delivering impact at scale.
-      </p>
     </section>
 
-    <!-- BADGES for Skills & Certs -->
-    <section style="text-align:center;">
-      <a href="#" class="badge"><img src="https://img.shields.io/badge/-Azure-0078D4?logo=microsoft-azure&logoColor=white" alt="Azure" /></a>
-      <a href="#" class="badge"><img src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white" alt="Python" /></a>
-      <a href="#" class="badge"><img src="https://img.shields.io/badge/-Jamf%20MDM-74B2E6?logo=apple&logoColor=white" alt="Jamf MDM" /></a>
-      <a href="#" class="badge"><img src="https://img.shields.io/badge/-AI%2FML-FFB300?logo=bytedance&logoColor=white" alt="AI/ML" /></a>
-      <a href="#" class="badge"><img src="https://img.shields.io/badge/-Microsoft%20365-00A4EF?logo=microsoft&logoColor=white" alt="Microsoft 365" /></a>
-      <a href="#" class="badge"><img src="https://img.shields.io/badge/-Active%20Directory-2672EB?logo=windows&logoColor=white" alt="Active Directory" /></a>
+    <section id="about">
+      <h2 style="color:var(--accent);text-align:center;">About</h2>
+      <div style="max-width:520px;margin:auto;font-size:1em;">
+        <b>Senior IT & Cloud Specialist (3+ years @ Optimizely, Sweden).</b><br>
+        Skills: Azure, M365, Jamf, Python, Intune, Compliance, AI/ML, Security, ITIL, Onboarding.<br>
+        <b>Certs:</b> Jamf Certified Associate (2024), MS Office Specialist, HCIP Routing & Switching.<br>
+        <b>Awards:</b> Spot Award (Optimizely).<br>
+        <b>Community:</b> AAOU, Akhuwat. <br>
+        <b>Tools:</b> Azure, MS365, Intune, Jamf, Active Directory, ServiceNow.
+      </div>
     </section>
 
-    <!-- FEATURED PROJECTS -->
-    <section>
-      <h2>Featured Projects</h2>
-      <article>
-        <h3>Local LLM Experimentation on Mac</h3>
-        <p>Building task-specific AI chatbots and tools (Python, Hugging Face, Streamlit) for Mac, leveraging Apple Silicon for enterprise and productivity. Custom offline LLMs, Vibe coding and real-world IT productivity solutions.</p>
-      </article>
-      <article>
-        <h3>Hospital Network Management System</h3>
-        <p>Designed a live, secure hub-and-spoke network (VPN, GRE tunnels, Windows Server) across 4 hospitals, enabling real-time appointments and multi-site connectivity. Web app, full stack design, zero downtime.</p>
-      </article>
+    <section id="contact">
+      <h2 style="color:var(--accent);text-align:center;">Contact</h2>
+      <div style="text-align:center;">
+        <a href="mailto:zeshan@nasir.icloud.com" class="btn" style="margin: 0 8px;">Email</a>
+        <a href="https://linkedin.com/in/zeshannasir" target="_blank" class="btn" style="margin: 0 8px;">LinkedIn</a>
+        <a href="https://github.com/ZeshanNasir" target="_blank" class="btn" style="margin: 0 8px;">GitHub</a>
+      </div>
+      <div style="text-align:center;color:#333;margin-top:22px;">Open for work, collaboration, and new adventures. Always eager to chat about cloud, AI & automation!</div>
     </section>
-
-    <!-- CERTIFICATIONS / AWARDS -->
-    <section>
-      <h2>Certifications & Recognition</h2>
-      <ul>
-        <li><b>Jamf Certified Associate – Jamf Pro</b> (2024)</li>
-        <li><b>Microsoft Office Specialist</b> (Excel, PowerPoint, Word)</li>
-        <li>Leadership Foundations (LinkedIn)</li>
-        <li>HCIP Routing & Switching (Huawei)</li>
-        <li>Spot Award: Focus on Customer Outcomes (Optimizely)</li>
-      </ul>
-    </section>
-
-    <!-- ENDORSED SKILLS -->
-    <section>
-      <h2>Endorsed Skills</h2>
-      <ul>
-        <li>Cloud: Azure, Microsoft 365, Intune (8+ yrs)</li>
-        <li>AI/Machine Learning, Python, Automation</li>
-        <li>System Administration, Active Directory, ISO/GDPR</li>
-        <li>Networking, Troubleshooting (99+ endorsements)</li>
-        <li>ITIL, ServiceNow, Incident Management</li>
-      </ul>
-    </section>
-
-    <!-- RECOMMENDATIONS -->
-    <section>
-      <h2>Recommendations</h2>
-      <blockquote>
-        “Zeshan’s ability to handle multiple projects made a dramatic increase in productivity for our company. As a team member or a leader, Zeeshan earns my highest recommendation.” – Nasir Rasheed, IT Technical Support
-      </blockquote>
-      <blockquote>
-        “Zeshan with his solid confidence, assured the best solutions even when options were few.” – Rizwan Ahmad, Technical Solutions Architect
-      </blockquote>
-    </section>
-
-    <!-- VOLUNTEERING & COMMUNITY -->
-    <section>
-      <h2>Community & Volunteering</h2>
-      <ul>
-        <li><b>Student Volunteer</b> – Asian Association of Open Universities (AAOU)</li>
-        <li><b>Akhuwat</b> – Poverty alleviation, 12+ years service</li>
-      </ul>
-    </section>
-
-    <footer>
-      &copy; 2025 Zeshan Nasir | <a href="mailto:zeshan.nasir@example.com">Contact</a>
-    </footer>
   </div>
+  <footer>
+    &copy; 2025 Zeshan Nasir. <a href="https://zeshannasir.github.io" class="footer-link">Crafted by yours truly</a>
+  </footer>
 </body>
 </html>
