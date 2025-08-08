@@ -1,103 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Zeshan Nasir | IT & Cloud Specialist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zeshan Nasir - Senior IT & Cloud Specialist. Azure, Automation, AI, Security, Microsoft 365, and more.">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cloud, Automation, AI, Security. Portfolio of Zeshan Nasir." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root { --accent: #5e60ce; --muted: #f9faff; --bold: #232535; --light: #eaeaff; }
-    body { margin:0; background:var(--muted); font-family:'Montserrat',Arial,sans-serif; color:var(--bold);}
-    .navbar { padding:32px 0 14px 0; background:var(--muted); text-align:center; }
-    .navbar a { margin:0 18px; color:var(--accent); font-weight:500; text-decoration:none; border-bottom:2px solid transparent; transition: border-color .12s;}
-    .navbar a:hover { border-bottom:2px solid var(--accent); color:#fa71cd; }
-    .container { max-width:750px; margin:30px auto 40px auto; box-shadow:0 4px 24px var(--light); border-radius:18px; background:#fff; padding:48px 30px 38px 30px;}
-    .hero { text-align:center; }
-    .avatar { width:120px; height:120px; border-radius:50%; border:3px solid var(--accent); object-fit:cover; margin-bottom:12px; box-shadow:0 2px 8px #5e60ce1a;}
-    h1 { font-size:2.35em; font-weight:700; margin:13px 0 0 0;}
-    .headline { color:var(--accent);font-size:1.22em;font-weight:600;margin:0 0 19px 0;}
-    .about { color:#262a3f; font-size:1.09em; margin:18px auto 26px auto; max-width:540px;line-height:1.7;}
-    .projects { display:grid; grid-template-columns:1fr 1fr; grid-gap:28px; margin:40px 0;}
-    .project-card { background:var(--light); border-radius:10px; box-shadow:0 2px 7px #c6cbf124; padding:23px 20px 14px 20px;}
-    .project-title { color:var(--accent);margin:0 0 9px 0;font-size:1.11em;font-weight:700;}
-    .project-desc { margin:0 0 11px 0;}
-    .btn { display:inline-block; background:var(--accent);color:#fff; border-radius:15px; padding:6px 18px; font-weight:600; text-decoration:none; font-size:1em; transition:background .12s;}
-    .btn:hover { background:#463ac6;}
-    @media (max-width:700px){
-      .container { padding:1.2em; }
-      .projects { grid-template-columns:1fr;}
+    :root {
+      --bg: linear-gradient(135deg, #f4e6ff 0%, #f9faff 80%);
+      --card-bg: #fff;
+      --card-grad: linear-gradient(120deg, #f6dcfa 55%, #e6eaff 100%);
+      --primary: #5e60ce;
+      --accent: #fa71cd;
+      --secondary: #46afa7;
+      --heading: #241959;
+      --muted: #7881b1;
+      --white: #fff;
+      --br: 22px;
+      --shadow: 0 6px 32px 2px #5e60ce20;
+      --shadow-card: 0 4px 18px #6244e220;
+      --section-pad: 48px 0 36px 0;
     }
-    footer { text-align:center; margin-top:35px; color:#75747f; font-size:.97em;}
-    .footer-link { color:#b489e6; text-decoration:underline;}
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+      color: var(--heading);
+    }
+    .outer {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    header {
+      background: var(--bg);
+      padding: 42px 0 5px 0;
+      text-align: center;
+      position: relative;
+    }
+    .avatar {
+      width: 128px; height: 128px;
+      border-radius: 50%;
+      border: 5px solid var(--accent);
+      object-fit: cover;
+      background: #fff;
+      box-shadow: 0 8px 24px #473bac2a;
+      margin-bottom: 16px;
+      transition: box-shadow .2s;
+    }
+    .avatar:hover {
+      box-shadow: 0 0 0 6px #fa71cd33, 0 8px 32px #5e60ce1a;
+    }
+    h1 {
+      font-family: 'Montserrat',Arial,sans-serif;
+      font-size: 2.75em;
+      font-weight: 700;
+      margin: 0 0 .17em 0;
+      line-height: 1.1;
+      background: linear-gradient(90deg,#7357f5 60%,#ff8bb7 98%);
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+    }
+    .headline {
+      color: var(--primary);
+      font-size: 1.21em;
+      font-weight: 600;
+      letter-spacing: .6px;
+      margin-bottom: .7em;
+    }
+    nav {
+      margin: 0 0 36px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1em;
+      border-radius: 14px;
+      padding: 8px 18px;
+      transition: all .2s cubic-bezier(.5,0,.25,1);
+      border: 2px solid transparent;
+      background: transparent;
+    }
+    nav a:focus, nav a:hover {
+      color: var(--accent);
+      background: #eff1f9;
+      border: 2px solid var(--accent);
+    }
+    .blurb {
+      max-width: 590px;
+      margin: 19px auto 0 auto;
+      font-size: 1.18em;
+      color: #343679;
+      text-align: center;
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: -38px auto 0 auto;
+      background: var(--white);
+      border-radius: var(--br);
+      box-shadow: var(--shadow);
+      padding: 48px 28px 38px 28px;
+      position: relative;
+      z-index: 10;
+      margin-bottom: 36px;
+    }
+
+    /* Section headers with a slick accent line */
+    .section {
+      margin: var(--section-pad);
+    }
+    .section-title {
+      font-size: 1.38em;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Montserrat',sans-serif;
+      font-weight: bold;
+      position: relative;
+      z-index: 1;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      margin: 9px auto 0 auto;
+      width: 38px; height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(90deg,var(--primary),var(--accent) 82%);
+    }
+
+    /* Project Cards */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 28px;
+    }
+    .project-card {
+      background: var(--card-grad);
+      border-radius: 16px;
+      box-shadow: var(--shadow-card);
+      padding: 22px 20px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      min-height: 160px;
+      transition: transform .21s cubic-bezier(.15,.7,.39,.95),box-shadow .27s;
+      z-index: 1;
+    }
+    .project-card:hover {
+      box-shadow: 0 8px 48px 2px #fa71cd64;
+      transform: translateY(-8px) scale(1.026);
+    }
+    .project-title {
+      color: var(--primary);
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      font-size: 1.13em;
+      letter-spacing: .09em;
+    }
+    .project-desc {
+      flex: 1;
+      color: #473ba7;
+      font-size: .98em;
+      margin-bottom: 0;
+      min-height: 38px;
+    }
+
+    /* About & Skills */
+    .about {
+      max-width: 670px;
+      margin: 0 auto;
+      padding: 0 0 23px 0;
+      color: #463aab;
+      font-size: 1.1em;
+      text-align: center;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin: 13px 0 11px 0;
+      padding: 0;
+    }
+    .badge {
+      display: flex;
+      align-items: center;
+      background: #e7ecff;
+      color: #5e60ce;
+      border-radius: 12px;
+      font-size: .99em;
+      font-weight: bold;
+      padding: 7px 16px 7px 11px;
+      box-shadow:0 1px 8px #f3eaff70;
+    }
+    .badge img {
+      width: 22px;
+      margin-right: 9px;
+      vertical-align: middle;
+    }
+
+    /* Contact Section */
+    .contact-btns {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 18px 0 10px 0;
+      flex-wrap: wrap;
+    }
+    .contact-btn {
+      background: linear-gradient(90deg,#5e60ce,#fa71cd 85%);
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 22px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.07em;
+      box-shadow:0 2px 12px #5e60ce20;
+      border: none;
+      outline: none;
+      transition: box-shadow .18s, background .22s;
+      cursor: pointer;
+    }
+    .contact-btn:hover, .contact-btn:focus {
+      background: linear-gradient(90deg,#6a3fd8,#ff98cc 90%);
+      box-shadow: 0 2px 26px #fa71cd22;
+    }
+    .footer {
+      text-align: center;
+      color: #7357f5;
+      margin: 44px 0 19px 0;
+      font-size: 1.07em;
+    }
+    @media (max-width:800px){
+      .container {padding: 1em 1.3vw;}
+    }
+    @media (max-width:500px){
+      .container {padding: 1.1em 4vw;}
+      h1 {font-size:2em;}
+    }
   </style>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="https://github.com/ZeshanNasir" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/zeshannasir" target="_blank">LinkedIn</a>
-  </nav>
-  <div class="container">
-    <div class="hero">
-      <img class="avatar" src="https://media.licdn.com/dms/image/C4D03AQHCe212U5ZNgA/profile-displayphoto-shrink_400_400/0/1517575396643?e=2147483647&v=beta&t=VbIUMbirhIuH9wIbKr3PB61MoyLmjRZagYHiV6yXsN0" alt="Zeshan Nasir profile photo">
+  <div class="outer">
+    <header>
+      <img class="avatar" src="https://media.licdn.com/dms/image/C4D03AQHCe212U5ZNgA/profile-displayphoto-shrink_400_400/0/1517575396643?e=2147483647&v=beta&t=VbIUMbirhIuH9wIbKr3PB61MoyLmjRZagYHiV6yXsN0" alt="Zeshan Nasir Avatar">
       <h1>Zeshan Nasir</h1>
       <div class="headline">IT &amp; Cloud Specialist, Automation &amp; AI Enthusiast</div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/ZeshanNasir" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/zeshannasir" target="_blank">LinkedIn</a>
+      </nav>
+      <div class="blurb">
+        Hello there! I’m Zeshan—a builder and optimizer of reliable, modern cloud and automation solutions. System Admin @ Optimizely (Stockholm).<br>
+        <b>Focus:</b> Cloud, Automation, Microsoft 365, Compliance (ISO/GDPR), AI/ML, Team Onboarding & Empowerment.<br>
+        Always curious, always learning—let’s make cool things happen.
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="projects" class="section">
+        <div class="section-title">Featured Projects</div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-title">Local LLM Experimentation on Mac</div>
+            <div class="project-desc">Deploying custom AI (Python, Hugging Face, LLM, Streamlit) for workflow and team productivity. Focus: real-world, privacy-first, local chatbots for Mac.</div>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Hospital Network Management System</div>
+            <div class="project-desc">Designed robust hub-and-spoke network (VPN, Windows, web scheduling) with real-time, multi-site hospital operations (ISO and GDPR compliant).</div>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Antarctic Skies Event Platform (collab)</div>
+            <div class="project-desc">End-to-end event/trip management for Antarctic Skies. Backend, cloud, DevOps, and dashboard UI. Inspired by Rizwan’s project with a performance and security boost.</div>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Motivational iOS App</div>
+            <div class="project-desc">Concept/design for a daily motivation app, helping users stay focused. (Inspired by Everyday Motivated by Rizwan Nasir.)</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-title">About & Skills</div>
+        <div class="about">
+          <b>Senior IT & Cloud Specialist (3+ years @ Optimizely, Sweden).</b><br>
+          Skills: Azure, M365, Jamf, Python, Intune, Compliance, AI/ML, Security, ITIL, Onboarding.<br>
+          <b>Certifications:</b> Jamf Certified Associate (2024), MS Office Specialist, HCIP Routing & Switching.<br>
+          <b>Awards:</b> Spot Award (Optimizely).<br>
+          <b>Community:</b> AAOU, Akhuwat.<br>
+          <b>Tools:</b> Azure, MS365, Intune, Jamf, Active Directory, ServiceNow.
+        </div>
+        <div class="badges">
+          <span class="badge"><img src="https://img.shields.io/badge/-Azure-0078D4?logo=microsoft-azure&logoColor=white" alt="Azure Logo"/>Azure</span>
+          <span class="badge"><img src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white" alt="Python Logo"/>Python</span>
+          <span class="badge"><img src="https://img.shields.io/badge/-AI%2FML-FFD600?logo=bytedance&logoColor=white" alt="AI/ML Logo"/>AI/ML</span>
+          <span class="badge"><img src="https://img.shields.io/badge/-Jamf%20MDM-74B2E6?logo=apple&logoColor=white" alt="Jamf Logo"/>Jamf MDM</span>
+          <span class="badge"><img src="https://img.shields.io/badge/-Microsoft%20365-00A4EF?logo=microsoft&logoColor=white" alt="Microsoft 365"/>Microsoft 365</span>
+          <span class="badge"><img src="https://img.shields.io/badge/-Active%20Directory-2672EB?logo=windows&logoColor=white" alt="Active Directory Logo"/>Active Directory</span>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-title">Contact</div>
+        <div class="contact-btns">
+          <a href="mailto:zeshan@nasir.icloud.com" class="contact-btn">Email</a>
+          <a href="https://linkedin.com/in/zeshannasir" target="_blank" class="contact-btn">LinkedIn</a>
+          <a href="https://github.com/ZeshanNasir" target="_blank" class="contact-btn">GitHub</a>
+        </div>
+        <div style="text-align:center; color:#6657f5; margin-bottom:8px;">
+          Open for work, collaboration, and new adventures. Always eager to chat about cloud, AI &amp; automation!
+        </div>
+      </section>
+    </main>
+    <div class="footer">
+      &copy; 2025 Zeshan Nasir &mdash; Crafted by yours truly | Design inspired by Rizwan Nasir
     </div>
-    <div class="about">
-      <b>Hello there!</b> I’m Zeshan—a builder and optimizer of reliable, modern cloud and automation solutions. System Admin @ Optimizely (Stockholm).<br>
-      <b>Focus:</b> Cloud, Automation, Microsoft 365, Compliance (ISO/GDPR), AI/ML, Team Onboarding &amp; Empowerment.<br>
-      Always curious, always learning—let’s make cool things happen.
-    </div>
-
-    <section id="projects">
-      <h2 style="color:var(--accent);text-align:center;margin-bottom:22px;">Featured Projects</h2>
-      <div class="projects">
-        <div class="project-card">
-          <div class="project-title">Local LLM Experimentation on Mac</div>
-          <div class="project-desc">Deploying custom AI (Python, Hugging Face, LLM, Streamlit) for workflow and team productivity. Focus: real-world, privacy-first, local chatbots for Mac.</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">Hospital Network Management System</div>
-          <div class="project-desc">Designed robust hub-and-spoke network (VPN, Windows, web scheduling) with real-time, multi-site hospital operations (ISO and GDPR compliant).</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">Antarctic Skies Event Platform (collab)</div>
-          <div class="project-desc">End-to-end event/trip management for Antarctic Skies. Backend, cloud, DevOps, and dashboard UI. Inspired by Rizwan's project with a performance and security boost.</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">Motivational iOS App</div>
-          <div class="project-desc">Concept/design for a daily motivation app, helping users stay focused. (Inspired by Everyday Motivated by Rizwan Nasir.)</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2 style="color:var(--accent);text-align:center;">About</h2>
-      <div style="max-width:520px;margin:auto;font-size:1em;">
-        <b>Senior IT & Cloud Specialist (3+ years @ Optimizely, Sweden).</b><br>
-        Skills: Azure, M365, Jamf, Python, Intune, Compliance, AI/ML, Security, ITIL, Onboarding.<br>
-        <b>Certs:</b> Jamf Certified Associate (2024), MS Office Specialist, HCIP Routing & Switching.<br>
-        <b>Awards:</b> Spot Award (Optimizely).<br>
-        <b>Community:</b> AAOU, Akhuwat. <br>
-        <b>Tools:</b> Azure, MS365, Intune, Jamf, Active Directory, ServiceNow.
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2 style="color:var(--accent);text-align:center;">Contact</h2>
-      <div style="text-align:center;">
-        <a href="mailto:zeshan@nasir.icloud.com" class="btn" style="margin: 0 8px;">Email</a>
-        <a href="https://linkedin.com/in/zeshannasir" target="_blank" class="btn" style="margin: 0 8px;">LinkedIn</a>
-        <a href="https://github.com/ZeshanNasir" target="_blank" class="btn" style="margin: 0 8px;">GitHub</a>
-      </div>
-      <div style="text-align:center;color:#333;margin-top:22px;">Open for work, collaboration, and new adventures. Always eager to chat about cloud, AI & automation!</div>
-    </section>
   </div>
-  <footer>
-    &copy; 2025 Zeshan Nasir. <a href="https://zeshannasir.github.io" class="footer-link">Crafted by yours truly</a>
-  </footer>
 </body>
 </html>
